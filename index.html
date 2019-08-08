@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>婚礼邀请</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="vendor/iakit/style.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link href="css/index.css" rel="stylesheet"/>
+    <style>
+        .imageRotate {
+            width: 32px;
+            height: 32px;
+            right: 12px;
+            top: 12px;
+            opacity: 1;
+            position: absolute;
+            display: block;
+            z-index: 99;
+        }
+
+        /* 这里用字蜘处理你需要的字体 (http://font-spider.org/) */
+        /* @font-face{
+            font-family: 'wedding';
+            src : url('/fonts/wedding.ttf');
+        } */
+
+        .welcome_name {
+            /* 这里用字蜘处理你需要的字体 */
+            /* font-family: 'wedding', serif; */
+            font-size: 32px;
+        }
+
+        .welcome_title {
+            /* font-family: 'wedding', serif; */
+            font-size: 28px;
+        }
+
+        .welcome_date {
+            font-size: 18px;
+        }
+
+        .mibile_end {
+            position: absolute;
+            bottom: 8%;
+            left: 20%;
+            color: #FEFEFE;
+        }
+
+        @-webkit-keyframes music_play {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes music_play {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate {
+            -webkit-animation: music_play 3s infinite linear;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <!-- xxxx.mp3为show文件夹下的音频文件，自行定义 -->
+    <audio preload autoplay loop id="music_tag" src="show/xxxx.mp3"></audio>
+    <img id="music_play" onclick="musicStop()" class="imageRotate rotate" src="show/musicon.png" alt="">
+    <img id="music_stop" onclick="musicPlay()" class="imageRotate" src="show/musicoff.png" alt="" style="display: none">
+</div>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide" id="cover">
+            <div class="imgbox">
+                <img src="show/cover.jpg" alt="">
+                <div class="welcome">
+                    <div class="names welcome_name">
+                        XXX & XXX
+                    </div>
+                    <div class="words">
+                        <div class="wedding welcome_title ani resize" style="top: 5px;" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+                            我们要结婚啦!
+                        </div>
+                        <div class="wedding ani welcome_date resize" style="top: 40px;" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                            2019.01.01（农历xxxxx）
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="swiper-slide" id="page1">
+            <div class="imgbox">
+                <img class="xzAni" src="show/mobile_01.jpg" alt="">
+                <div class="circle" style="width: 150px; height: 150px; top: 20px; left: 5px;"></div>
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="circle" style="width: 100px; height: 100px; top: 120px; left: 5px;"></div>
+                <div class="circle fast" style="width: 100px; height: 100px; top: 220px; right: 35px;"></div>
+                <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                <div class="circle" style="width: 150px; height: 150px; bottom: 20px; left: 5px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                    <img src="show/remark_01.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="page2">
+            <div class="imgbox">
+                <img class="qzin" src="show/mobile_02.jpg" alt="">
+                <div class="circle" style="width: 150px; height: 150px; top: 20px; left: 5px;"></div>
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="5s">
+                    <img src="show/remark_03.png" style="height: 150px;width:150px;display: inline-block;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="page3">
+            <div class="imgbox">
+                <img class="xzAni" src="show/mobile_03.jpg" alt="">
+                <div class="circle" style="width: 150px; height: 150px; top: 50px; left: 5px;"></div>
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                    <img src="show/remark_02.png" style="height: 150px;width:150px;display: inline-block;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="page4">
+            <div class="imgbox">
+                <img class="xzAni" src="show/mobile_04.jpg" alt="">
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="circle" style="width: 100px; height: 100px; top: 120px; left: 5px;"></div>
+                <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                <div class="circle" style="width: 150px; height: 150px; bottom: 20px; left: 5px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                    <img src="show/remark_04.png" style="height: 150px;width:150px;display: inline-block;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="page5">
+            <div class="imgbox">
+                <img class="xzAni" src="show/mobile_05.jpg" alt="">
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="circle" style="width: 100px; height: 100px; top: 120px; left: 5px;"></div>
+                <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                <div class="circle" style="width: 150px; height: 150px; bottom: 20px; left: 5px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                    <img src="show/remark_05.png" style="height: 150px;width:150px;display: inline-block;" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide" id="page6">
+            <div class="imgbox">
+                <img class="xzAni" src="show/mobile_06.jpg" alt="">
+                <div class="circle" style="width: 150px; height: 150px; top: 20px; left: 5px;"></div>
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="circle" style="width: 100px; height: 100px; top: 120px; left: 5px;"></div>
+                <div class="circle fast" style="width: 100px; height: 100px; top: 220px; right: 35px;"></div>
+                <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                <div class="circle" style="width: 150px; height: 150px; bottom: 20px; left: 5px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                    <img src="show/remark_06.png" style="height: 150px;width:150px;display: inline-block;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="page7">
+            <div class="imgbox">
+                <img class="xzAni" src="show/mobile_07.jpg" alt="">
+                <div class="circle" style="width: 150px; height: 150px; top: 50px; left: 5px;"></div>
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                    <img src="show/remark_04.png" style="height: 150px;width:150px;display: inline-block;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="page8">
+            <div class="imgbox">
+                <img class="qzin" src="show/mobile_08.jpg" alt="">
+                <div class="circle" style="width: 150px; height: 150px; top: 20px; left: 5px;"></div>
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="5s">
+                    <img src="show/remark_05.png" style="height: 150px;width:150px;display: inline-block;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" id="page9">
+            <div class="imgbox">
+                <img class="xzAni" src="show/mobile_09.jpg" alt="">
+                <div class="circle fast" style="width: 100px; height: 100px; top: 120px; right: 5px;"></div>
+                <div class="circle" style="width: 100px; height: 100px; top: 120px; left: 5px;"></div>
+                <div class="circle fast" style="width: 120px; height: 120px; top: 320px; left: 15px;"></div>
+                <div class="circle" style="width: 150px; height: 150px; bottom: 20px; left: 5px;"></div>
+                <div class="txtwarper ani resize" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay=".5s">
+                    <img src="show/remark_01.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide" id="back_cover">
+            <div class="imgbox">
+                <img src="show/mobile_end.jpg" alt="">
+                <div class="mibile_end">
+                    <form onsubmit="return false" action="#" method="post" id="friendForm">
+                        <input type="hidden" name="is_ajax" value="1">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" placeholder="您的姓名" name="name">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" placeholder="您的联系电话" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        <option selected value="1">不携带家属出席</option>
+                                        <option value="2">1位家属</option>
+                                        <option value="2">2位家属</option>
+                                        <option value="2">3位家属</option>
+                                        <option value="4">4位家属</option>
+                                        <option value="4">5位家属</option>
+                                        <option value="4">6位家属</option>
+                                        <option value="4">7位家属</option>
+                                        <option value="4">8位家属</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped is-flex-mobile">
+                            <div class="control">
+                                <button class="btn" onclick="people()" id="submit_people">我会来</button>
+                                <!-- 微信内导航需要微信js -->
+                                <!-- <button class="btn" type="button" onclick="openNavigation()" value="submit">婚礼地址</button> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <img src="./images/upArrow.png" id="array" class="resize"/>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script src="vendor/iakit/index.js"></script>
+<script>
+    scaleW = window.innerWidth / 320;
+    scaleH = window.innerHeight / 480;
+    let resize = document.querySelectorAll('.resize');
+    for (let j = 0; j < resize.length; j++) {
+        resize[j].style.width = parseInt(resize[j].style.width) * scaleW + 'px';
+        resize[j].style.height = parseInt(resize[j].style.height) * scaleH + 'px';
+        resize[j].style.top = parseInt(resize[j].style.top) * scaleH + 'px';
+        resize[j].style.left = parseInt(resize[j].style.left) * scaleW + 'px';
+    }
+    let mySwiper = new Swiper('.swiper-container', {
+        autoplay: 4000,
+        direction: 'vertical',
+        mousewheelControl: true,
+        loop: false,
+        speed: 1200,
+        zoom: true,
+        pagination: '.swiper-pagination',
+        paginationType: 'progress',
+        onInit: function (swiper) {
+            swiperAnimateCache(swiper);
+            swiperAnimate(swiper);
+        },
+        onSlideChangeEnd: function (swiper) {
+            swiperAnimate(swiper);
+        },
+        onTransitionEnd: function (swiper) {
+            swiperAnimate(swiper);
+        },
+
+        watchSlidesProgress: true,
+
+        onProgress: function (swiper) {
+            for (let i = 0; i < swiper.slides.length; i++) {
+                let slide = swiper.slides[i];
+                let progress = slide.progress;
+                let translate = progress * swiper.height / 4;
+                let scale = 1 - Math.min(Math.abs(progress * 0.5), 1), es;
+                slide.style.opacity = 1 - Math.min(Math.abs(progress / 2), 0.5);
+                es = slide.style;
+                es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,' + translate + 'px,-' + translate + 'px) scaleY(' + scale + ')';
+            }
+        },
+
+        onSetTransition: function (swiper, speed) {
+            for (let i = 0, es; i < swiper.slides.length; i++) {
+                es = swiper.slides[i].style;
+                es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+            }
+        },
+    });
+
+    function musicPlay() {
+        document.getElementById('music_stop').style.display = 'none';
+        document.getElementById('music_play').style.display = '';
+        document.getElementById("music_tag").play();
+    }
+
+    function musicStop() {
+        document.getElementById('music_stop').style.display = '';
+        document.getElementById('music_play').style.display = 'none';
+        document.getElementById("music_tag").pause();
+    }
+
+    function people() {
+        fixScroll();
+        let submit_people = $('#submit_people');
+        submit_people.attr("disabled", true);
+        $.ajax({
+            //几个参数需要注意一下
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/friend",// 提交到后端的url
+            data: $('#friendForm').serialize(),
+            success: function (data) {
+                iakit.toast.showCenter(data.msg);
+                submit_people.attr("disabled", false);
+            },
+            error: function () {
+                iakit.toast.showCenter('提交故障，请联系新郎~');
+            }
+        });
+    }
+
+    function fixScroll() {
+        let u = navigator.userAgent;
+        let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        if (isiOS) {
+            window.scrollTo(0, 0);
+        }
+    }
+
+    $(document).ready(function() {
+
+
+        let musicPlay = document.getElementById("music_tag").play();
+
+        if (musicPlay !== undefined) {
+            musicPlay.then(_ => {
+                musicPlay.play();
+            })
+            .catch(error => {
+
+            });
+        }
+    });
+</script>
+</body>
+
+</html>

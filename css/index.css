@@ -1,0 +1,309 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "microsoft yahei", serif;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    background: #fffafa;
+}
+
+img {
+    display: block;
+}
+
+@-webkit-keyframes start {
+    0%, 30% {
+        opacity: 0;
+        -webkit-transform: translate(0, 10px);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, -8px);
+    }
+}
+
+@-moz-keyframes start {
+    0%, 30% {
+        opacity: 0;
+        -moz-transform: translate(0, 10px);
+    }
+
+    60% {
+        opacity: 1;
+        -moz-transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translate(0, -8px);
+    }
+}
+
+@keyframes start {
+    0%, 30% {
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, -8px);
+    }
+}
+
+.ani {
+    position: absolute;
+}
+
+#array {
+    position: absolute;
+    z-index: 999;
+    width: 20px;
+    height: 15px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -10px;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+}
+
+.circle {
+    border-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    -webkit-animation: twinkle 8s infinite ease-in-out;
+}
+
+.circle.fast {
+    -webkit-animation: twinkle 3s infinite ease-in-out;
+}
+
+.imgbox {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    max-height: 100%;
+}
+
+.imgbox img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.imgbox.horizontal img {
+    height: 100%;
+    width: auto;
+}
+
+.txtwarper {
+    background-position: bottom;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.welcome {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #FEFEFE;
+    font-family: "Microsoft JhengHei", serif;
+    font-size: 1.8rem;
+}
+
+.info {
+    color: #e082ae;
+    height: 300px;
+    /* background-image: url(show/backgroud.jpg); */
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+    text-align: center;
+    margin-top: 15%;
+    padding-top: 20%;
+    letter-spacing: 2px;
+    line-height: 32px;
+}
+
+.words {
+    position: relative;
+    text-align: center;
+}
+
+.wedding {
+    font-weight: bold;
+    width: 100%;
+}
+
+.names {
+    display: inline-block;
+    padding: 5px 20px;
+    position: relative;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9
+}
+
+.names:after {
+    content: ' ';
+    width: 120%;
+    height: 2px;
+    position: absolute;
+    bottom: 1px;
+    left: -10%;
+    background: -webkit-linear-gradient(left, #fff 0%, #f3accd 20%, #e770a7 53%, #f3accd 79%, #fff 100%);
+}
+
+.xzAni {
+    animation: xz 10s ease infinite both;
+}
+
+.qzin {
+    animation: qzin 8s ease 1 both;
+}
+
+/*旋转放大*/
+@keyframes xz {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(7deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(0) scale(1)
+    }
+}
+
+/*气泡闪烁*/
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*平行移动*/
+@keyframes moveX {
+    0% {
+        transform: translate(0, 0)
+    }
+    50% {
+        transform: translate(-420px, 0)
+    }
+    0% {
+        transform: translate(0, 0)
+    }
+
+}
+
+/*曲折进入*/
+@-webkit-keyframes qzin {
+    0% {
+        transform: scaleX(0.6) scaleY(0.6) translateX(3px) translateY(941px) rotate(-10deg) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: scaleX(0.7) scaleY(0.7) translateX(0px) translateY(0px) rotate(10deg) rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: scaleX(1) scaleY(1) translateX(0px) translateY(0px) rotate(0deg) rotateX(0deg) rotateY(0deg);
+    }
+}
+
+.index_button {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: rgba(190, 116, 123, 0.901961);
+    border-radius: 100px;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+.voice-controller {
+    position: fixed;
+    z-index: 10;
+    width: .5rem;
+    height: .5rem;
+}
+
+.voice-controller img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
